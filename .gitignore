@@ -1,0 +1,16 @@
+# Build output
+out/
+build/
+
+# Visual Studio
+.vs/
+*.vcxproj.user
+*.suo
+*.user
+
+# Generated images (can be regenerated from CSV data)
+*.png
+
+# OS files
+Thumbs.db
+.DS_Store

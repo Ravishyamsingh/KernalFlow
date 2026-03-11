@@ -1,0 +1,40 @@
+﻿{
+  "configurations": [
+    {
+      "name": "x64-Debug",
+      "generator": "Ninja",
+      "configurationType": "Debug",
+      "inheritEnvironments": [ "msvc_x64_x64" ],
+      "buildRoot": "${projectDir}\\out\\build\\${name}",
+      "installRoot": "${projectDir}\\out\\install\\${name}",
+      "cmakeCommandArgs": "-DCMAKE_CUDA_FLAGS=\"-allow-unsupported-compiler\" -DCMAKE_CUDA_ARCHITECTURES=\"75;86;89\"",
+      "buildCommandArgs": "",
+      "ctestCommandArgs": "",
+      "variables": [
+        {
+          "name": "CMAKE_CUDA_FLAGS",
+          "value": "-allow-unsupported-compiler",
+          "type": "STRING"
+        }
+      ]
+    },
+    {
+      "name": "x64-Release",
+      "generator": "Ninja",
+      "configurationType": "Release",
+      "inheritEnvironments": [ "msvc_x64_x64" ],
+      "buildRoot": "${projectDir}\\out\\build\\${name}",
+      "installRoot": "${projectDir}\\out\\install\\${name}",
+      "cmakeCommandArgs": "-DCMAKE_CUDA_FLAGS=\"-allow-unsupported-compiler\" -DCMAKE_CUDA_ARCHITECTURES=\"75;86;89\"",
+      "buildCommandArgs": "",
+      "ctestCommandArgs": "",
+      "variables": [
+        {
+          "name": "CMAKE_CUDA_FLAGS",
+          "value": "-allow-unsupported-compiler --use_fast_math",
+          "type": "STRING"
+        }
+      ]
+    }
+  ]
+}

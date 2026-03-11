@@ -353,8 +353,8 @@ def main() -> None:
 
     out_path = Path(args.output)
     fig.savefig(out_path, dpi=200, bbox_inches="tight", facecolor=fig.get_facecolor())
-    plt.close(fig)
     print(f"Saved → {out_path.resolve()}")
+    plt.show()
 
 
 if __name__ == "__main__":
