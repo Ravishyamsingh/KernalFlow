@@ -14,3 +14,19 @@ build/
 # OS files
 Thumbs.db
 .DS_Store
+
+cd C:1\Users\princ\source\repos\KernalFlow Remove-Item -Path out -Recurse -Force -ErrorAction SilentlyContinue cmake -S . -B out\build\x64-Debug -G "Visual Studio 18 2026" -A x64 -T "cuda=12.8" cmake --build out\build\x64-Debug --config Debug
+
+
+.\out\build\x64-Debug\Debug\test_tensor.exe
+.\out\build\x64-Debug\Debug\test_model.exe
+.\out\build\x64-Debug\Debug\bench_gemm.exe
+.\out\build\x64-Debug\Debug\bench_inference.exe
+.\out\build\x64-Debug\Debug\dqn_train.exe
+
+Get-ChildItem .\out\build\x64-Debug\Debug*.exe | Select-Object Name,Length,LastWriteTime
+
+
+python .\benchmark\plot_results.py python .\viz\kernel_profile.py python .\viz\reward_plot.py
+
+

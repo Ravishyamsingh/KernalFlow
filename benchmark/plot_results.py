@@ -353,7 +353,8 @@ def main() -> None:
 
     out_path = Path(args.output)
     fig.savefig(out_path, dpi=200, bbox_inches="tight", facecolor=fig.get_facecolor())
-    print(f"Saved → {out_path.resolve()}")
+    # Use ASCII arrow to avoid Unicode encoding issues on some Windows consoles
+    print(f"Saved -> {out_path.resolve()}")
     plt.show()
 
 

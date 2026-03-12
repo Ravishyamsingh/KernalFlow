@@ -21,6 +21,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CUDA_STANDARD 17)
 set(CMAKE_CUDA_STANDARD_REQUIRED ON)
 
+
 # CUDA architectures (adjust based on your GPU)
 # 89 = Ada (RTX 40 series), 86 = Ampere (RTX 30 series), 75 = Turing (RTX 20 series)
 set(CMAKE_CUDA_ARCHITECTURES 75 86 89)

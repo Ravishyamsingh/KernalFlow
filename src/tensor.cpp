@@ -23,6 +23,7 @@ Tensor::Tensor(std::vector<int> shape)
       shape_(std::move(shape)),
       total_size_(0),
       on_gpu_(false)
+
 {
     // Compute total element count by multiplying all dimensions
     total_size_ = std::accumulate(shape_.begin(), shape_.end(), 1,

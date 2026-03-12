@@ -129,7 +129,8 @@ def main() -> None:
     # ── Save ─────────────────────────────────────────────────────────────────
     out_path = Path(args.output)
     fig.savefig(out_path, dpi=200, bbox_inches="tight", facecolor=fig.get_facecolor())
-    print(f"Saved → {out_path.resolve()}")
+    # Avoid Unicode characters in console output on Windows
+    print(f"Saved -> {out_path.resolve()}")
     plt.show()
 
 
